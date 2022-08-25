@@ -1,7 +1,8 @@
 import React from 'react';
+import './propertyitem.scss';
 
-const PropertyItem = () => {
-  return <div>Property Item component</div>;
+const PropertyItem = ({ property }) => {
+  return <div className='property-container'>Property Item component</div>;
 };
 
 export default PropertyItem;
