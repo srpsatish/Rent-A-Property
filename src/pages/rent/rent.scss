@@ -1,0 +1,92 @@
+.rent-container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+
+  .rent-head {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+    .title {
+      font-size: 36px;
+      font-weight: 600;
+    }
+    .search-bar {
+      padding: 10px;
+      border: 2px solid #185abc33;
+      border-radius: 5px;
+      color: #00000066;
+      font-size: 14px;
+      font-weight: 600;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      input {
+        border: none;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      input:focus {
+        outline: none;
+      }
+      .drop-down {
+        width: 12px;
+        height: 12px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .filter-section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 10px;
+    display: flex;
+
+    .filter-item {
+      border-right: 1px solid #d0d0d0;
+      flex: 1;
+      padding: 0 20px;
+
+      &:last-child {
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      label {
+        color: #00000066;
+        font-size: 15px;
+        font-weight: 500;
+      }
+      input,
+      select {
+        display: block;
+        font-size: 15px;
+        font-weight: 600;
+        border: none;
+        width: 150px;
+        margin-top: 5px;
+
+        option {
+          font-size: 15px;
+          font-weight: 600;
+        }
+      }
+      input:focus,
+      select:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .preview-section {
+    margin-top: 20px;
+  }
+}

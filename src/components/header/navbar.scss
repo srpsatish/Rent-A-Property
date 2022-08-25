@@ -1,0 +1,59 @@
+.header {
+  display: flex;
+  padding: 15px 30px;
+  background-color: #fff;
+  border-bottom: 1px solid #d0d0d0a0;
+
+  .logo-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: #185abc;
+    text-decoration: none;
+  }
+  .nav-section {
+    flex: 9;
+    display: flex;
+
+    .navbar {
+      flex: 1;
+      display: flex;
+      justify-content: space-around;
+
+      .nav-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        font-weight: 600;
+        text-decoration: none;
+        padding: 10px;
+        color: #000;
+        background-color: #fff;
+
+        &:hover {
+          background-color: aqua;
+          color: #185abc;
+        }
+
+        .drop {
+          width: 12px;
+          height: 12px;
+          margin-left: 10px;
+        }
+      }
+      .active {
+        background-color: aqua;
+        color: #185abc;
+      }
+    }
+    .login-buttons {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}

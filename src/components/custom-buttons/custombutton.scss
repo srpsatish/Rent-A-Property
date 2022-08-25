@@ -1,0 +1,45 @@
+.filled-btn {
+  width: auto;
+  letter-spacing: 0.5px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: #ca46ef;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background-color: white;
+    color: #ca46ef;
+    border: 1px solid #ca46ef;
+  }
+}
+
+.outlined-btn {
+  width: auto;
+  letter-spacing: 0.5px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: #fff;
+  color: #ca46ef;
+  border: 1px solid #ca46ef;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background-color: #ca46ef;
+    color: #fff;
+    border: none;
+  }
+}
