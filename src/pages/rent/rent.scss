@@ -1,5 +1,5 @@
 .rent-container {
-  width: 80%;
+  width: 80vw;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -17,7 +17,7 @@
     .search-bar {
       padding: 10px;
       border: 2px solid #185abc33;
-      border-radius: 5px;
+      border-radius: 6px;
       color: #00000066;
       font-size: 14px;
       font-weight: 600;
@@ -45,7 +45,7 @@
   .filter-section {
     background-color: #fff;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 6px;
     margin-bottom: 10px;
     display: flex;
 

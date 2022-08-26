@@ -1,0 +1,20 @@
+.fav-container {
+  width: 80vw;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0px;
+
+  .title {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  .fav-list {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+  }
+}

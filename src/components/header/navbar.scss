@@ -2,7 +2,7 @@
   display: flex;
   padding: 15px 30px;
   background-color: #fff;
-  border-bottom: 1px solid #d0d0d0a0;
+  border-bottom: 1px solid #00000011;
 
   .logo-container {
     flex: 1;
@@ -11,15 +11,21 @@
     align-items: center;
     font-size: 18px;
     font-weight: 700;
-    color: #185abc;
+    color: navy;
     text-decoration: none;
+
+    .logo {
+      width: 18px;
+      height: 18px;
+      margin-right: 6px;
+    }
   }
   .nav-section {
     flex: 9;
     display: flex;
 
     .navbar {
-      flex: 1;
+      flex: 1.2;
       display: flex;
       justify-content: space-around;
 
@@ -30,13 +36,13 @@
         font-size: 15px;
         font-weight: 600;
         text-decoration: none;
-        padding: 10px;
+        padding: 0px 15px;
         color: #000;
         background-color: #fff;
-        border-radius: 5px;
+        border-radius: 6px;
 
         &:hover {
-          background-color: aqua;
+          background-color: #185abc22;
           color: #185abc;
         }
 
@@ -47,7 +53,7 @@
         }
       }
       .active {
-        background-color: aqua;
+        background-color: #185abc22;
         color: #185abc;
       }
     }

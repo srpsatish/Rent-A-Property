@@ -4,7 +4,7 @@ import FilledButton from '../../components/custom-buttons/FilledButton';
 import PropertyPreview from './../../components/property-preview/PropertyPreview';
 import './rent.scss';
 
-const Rent = () => {
+const Rent = ({ properties, addfn }) => {
   const [searchInput, setSearchInput] = useState('');
   const [location, setLocation] = useState('New Work, USA');
   const [moveinDate, setMoveinDate] = useState('2022-08-25');
@@ -16,68 +16,7 @@ const Rent = () => {
   //   console.log(price);
   //   console.log(propertyType);
   // }, [location, moveinDate, price, propertyType]);
-  const properties = [
-    {
-      id: 1,
-      name: 'Palm Harbor',
-      costpm: '$2095',
-      imguri: 'hjgfhgdc',
-      address: '2699 Green valley, Highland Lake, FL',
-      bed: 3,
-      bathroom: 2,
-      size: '5x7 m2',
-      fav: false,
-      populor: true,
-    },
-    {
-      id: 2,
-      name: 'Palm Harbor',
-      costpm: '$2095',
-      imguri: 'hjgfhgdc',
-      address: '2699 Green valley, Highland Lake, FL',
-      bed: 3,
-      bathroom: 2,
-      size: '5x7 m2',
-      fav: false,
-      populor: true,
-    },
-    {
-      id: 3,
-      name: 'Palm Harbor',
-      costpm: '$2095',
-      imguri: 'hjgfhgdc',
-      address: '2699 Green valley, Highland Lake, FL',
-      bed: 3,
-      bathroom: 2,
-      size: '5x7 m2',
-      fav: false,
-      populor: true,
-    },
-    {
-      id: 4,
-      name: 'Palm Harbor',
-      costpm: '$2095',
-      imguri: 'hjgfhgdc',
-      address: '2699 Green valley, Highland Lake, FL',
-      bed: 3,
-      bathroom: 2,
-      size: '5x7 m2',
-      fav: false,
-      populor: true,
-    },
-    {
-      id: 5,
-      name: 'Palm Harbor',
-      costpm: '$2095',
-      imguri: 'hjgfhgdc',
-      address: '2699 Green valley, Highland Lake, FL',
-      bed: 3,
-      bathroom: 2,
-      size: '5x7 m2',
-      fav: false,
-      populor: true,
-    },
-  ];
+
   return (
     <div className='rent-container'>
       <div className='rent-head'>
@@ -149,7 +88,7 @@ const Rent = () => {
         </div>
       </div>
       <div className='preview-section'>
-        <PropertyPreview properties={properties} />
+        <PropertyPreview properties={properties} addfn={addfn} />
       </div>
     </div>
   );

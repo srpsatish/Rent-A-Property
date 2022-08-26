@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Down from '../../assets/dropdown.png';
+import Logo from '../../assets/logo.png';
 import FilledButton from '../custom-buttons/FilledButton';
 import OutlinedButton from '../custom-buttons/OutlinedButton';
 import './navbar.scss';
@@ -9,6 +10,7 @@ const Navbar = () => {
   return (
     <div className='header'>
       <NavLink to='/' className='logo-container'>
+        <img src={Logo} alt='logo' className='logo' />
         Estatery
       </NavLink>
       <div className='nav-section'>
@@ -30,6 +32,9 @@ const Navbar = () => {
             Resources
             <img src={Down} alt='down' className='drop' />
           </div>
+          <NavLink to='/favorite' className='nav-item'>
+            Favorite
+          </NavLink>
         </div>
         <div className='login-buttons'>
           <OutlinedButton>Login</OutlinedButton>
