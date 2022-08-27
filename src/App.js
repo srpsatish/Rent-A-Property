@@ -12,7 +12,7 @@ function App() {
     {
       id: 1,
       name: 'Palm Harbor',
-      costpm: '$5,095',
+      costpm: '5,095',
       imguri: require('./assets/property1.jpg'),
       address: '2699 Green valley, Highland Lake, FL',
       bed: 3,
@@ -24,7 +24,7 @@ function App() {
     {
       id: 2,
       name: 'Beverly Springfield',
-      costpm: '$2,700',
+      costpm: '2,700',
       imguri: require('./assets/property2.jpg'),
       address: '2821 Lake Sevilla, Palm Harbor, TX',
       bed: 4,
@@ -36,7 +36,7 @@ function App() {
     {
       id: 3,
       name: 'Faulkner Ave',
-      costpm: '$2,450',
+      costpm: '2,450',
       imguri: require('./assets/property3.jpg'),
       address: '909 Woodland St. Michigan, IN',
       bed: 4,
@@ -48,7 +48,7 @@ function App() {
     {
       id: 4,
       name: 'Beverly Harbor',
-      costpm: '$20,195',
+      costpm: '20,195',
       imguri: require('./assets/property4.jpg'),
       address: '2699 Green valley, Highland Lake, FL',
       bed: 3,
@@ -60,7 +60,7 @@ function App() {
     {
       id: 5,
       name: 'Springfield Palm',
-      costpm: '$12,095',
+      costpm: '12,095',
       imguri: require('./assets/property5.jpeg'),
       address: '2821 Lake Sevilla, Palm Harbor, TX',
       bed: 4,
@@ -72,7 +72,7 @@ function App() {
     {
       id: 6,
       name: 'Emaar the palm spring',
-      costpm: '$12,095',
+      costpm: '12,095',
       imguri: require('./assets/property6.png'),
       address: 'sector-54, Gurgaon, IN',
       bed: 4,
@@ -84,7 +84,7 @@ function App() {
     {
       id: 7,
       name: 'Jambusavari dinne',
-      costpm: '$12,095',
+      costpm: '12,095',
       imguri: require('./assets/property7.jpg'),
       address: 'Sector-34, Noida, IN',
       bed: 4,
@@ -96,7 +96,7 @@ function App() {
     {
       id: 8,
       name: 'TMR Blossom',
-      costpm: '$12,095',
+      costpm: '12,095',
       imguri: require('./assets/property2.jpg'),
       address: '2821 Lake Sevilla, Palm Harbor, TX',
       bed: 4,
@@ -108,7 +108,7 @@ function App() {
     {
       id: 9,
       name: 'power Grid Township',
-      costpm: '$12,095',
+      costpm: '12,095',
       imguri: require('./assets/property1.jpg'),
       address: '2821 Lake Sevilla, Palm Harbor, TX',
       bed: 4,
@@ -120,7 +120,7 @@ function App() {
     {
       id: 10,
       name: 'SRP Blossom',
-      costpm: '$12,095',
+      costpm: '12,095',
       imguri: require('./assets/property3.jpg'),
       address: '2821 Lake Sevilla, Palm Harbor, TX',
       bed: 4,
@@ -146,9 +146,9 @@ function App() {
     setFavProperties(newfav);
   }, [properties]);
 
-  useEffect(() => {
-    console.log(favProperties);
-  }, [favProperties]);
+  // useEffect(() => {
+  //   console.log(properties);
+  // }, [properties]);
   return (
     <div style={{ backgroundColor: '#185abc10' }}>
       <Navbar />

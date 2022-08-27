@@ -13,7 +13,7 @@ const PropertyItem = ({ property, addfn }) => {
       <div className='content'>
         <div className='cost'>
           <div>
-            <span className='costpm'>{property.costpm}</span>
+            <span className='costpm'>${property.costpm}</span>
             <span className='month'>/month</span>
           </div>
           {property.fav ? (

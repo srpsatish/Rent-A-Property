@@ -6,9 +6,9 @@ import './rent.scss';
 
 const Rent = ({ properties, addfn }) => {
   const [searchInput, setSearchInput] = useState('');
-  const [location, setLocation] = useState('New Work, USA');
+  const [location, setLocation] = useState('IN');
   const [moveinDate, setMoveinDate] = useState('2022-08-25');
-  const [price, setPrice] = useState('$500-$2,500');
+  const [price, setPrice] = useState('500-2,500');
   const [propertyType, setPropertyType] = useState('House');
 
   const [filteredProperties, setFilteredProperties] = useState([]);
@@ -23,10 +23,26 @@ const Rent = ({ properties, addfn }) => {
       );
     });
     setFilteredProperties(newProperty);
-  }, [searchInput]);
+  }, [searchInput, properties]);
 
-  const handleSearch = () => {};
-
+  const handleSearch = () => {
+    // const prices = price.split('-');
+    // const lprice = prices[0].split(',').join('');
+    // const hprice = prices[1].split(',').join('');
+    const newProp = properties.filter(property => {
+      const regex = new RegExp(`${location}`, 'gi');
+      return property.name.match(regex) || property.address.match(regex);
+    });
+    // const newProp1 = newProp.filter(
+    //   prop =>
+    //     prop.costpm.split(',').join('') > lprice &&
+    //     prop.costpm.split(',').join('') < hprice
+    // );
+    setFilteredProperties(newProp);
+  };
+  useEffect(() => {
+    console.log(filteredProperties);
+  }, [filteredProperties]);
   return (
     <div className='rent-container'>
       <div className='rent-head'>
@@ -62,18 +78,18 @@ const Rent = ({ properties, addfn }) => {
           />
         </div>
         <div className='filter-item'>
-          <label htmlFor='price'>Price</label>
+          <label htmlFor='price'>Price(in $)</label>
           <select
             name='price'
             id='price'
             value={price}
             onChange={e => setPrice(e.target.value)}
           >
-            <option value='$500-$2,500'>$500-$2,500</option>
-            <option value='$2,500-$5,000'>$2,500-$5,000</option>
-            <option value='$5,000-$10,000'>$5,000-$10,000</option>
-            <option value='$10,000-$20,000'>$10,000-$20,000</option>
-            <option value='$20,000-$30,000'>$20,000-$30,000</option>
+            <option value='500-2,500'>500-2,500</option>
+            <option value='2,500-5,000'>2,500-5,000</option>
+            <option value='5,000-10,000'>5,000-10,000</option>
+            <option value='10,000-20,000'>10,000-20,000</option>
+            <option value='20,000-30,000'>20,000-30,000</option>
           </select>
         </div>
         <div className='filter-item'>
@@ -94,7 +110,7 @@ const Rent = ({ properties, addfn }) => {
           </select>
         </div>
         <div className='filter-item'>
-          <FilledButton>Search</FilledButton>
+          <FilledButton onClick={() => handleSearch()}>Search</FilledButton>
         </div>
       </div>
       <div className='preview-section'>
