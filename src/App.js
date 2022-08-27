@@ -1,10 +1,9 @@
 import { useEffect, useState } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/header/Navbar';
 import Buy from './pages/buy/Buy';
 import FavoritePage from './pages/favorite/FavoritePage';
-import HomePage from './pages/home/HomePage';
 import Rent from './pages/rent/Rent';
 import Sell from './pages/sell/Sell';
 
@@ -19,7 +18,7 @@ function App() {
       bed: 3,
       bathroom: 2,
       size: '5x7',
-      fav: false,
+      fav: true,
       populor: true,
     },
     {
@@ -70,6 +69,66 @@ function App() {
       fav: true,
       populor: true,
     },
+    {
+      id: 6,
+      name: 'Emaar the palm spring',
+      costpm: '$12,095',
+      imguri: require('./assets/property6.png'),
+      address: 'sector-54, Gurgaon, IN',
+      bed: 4,
+      bathroom: 2,
+      size: '7x10',
+      fav: false,
+      populor: true,
+    },
+    {
+      id: 7,
+      name: 'Jambusavari dinne',
+      costpm: '$12,095',
+      imguri: require('./assets/property7.jpg'),
+      address: 'Sector-34, Noida, IN',
+      bed: 4,
+      bathroom: 2,
+      size: '7x10',
+      fav: true,
+      populor: true,
+    },
+    {
+      id: 8,
+      name: 'TMR Blossom',
+      costpm: '$12,095',
+      imguri: require('./assets/property2.jpg'),
+      address: '2821 Lake Sevilla, Palm Harbor, TX',
+      bed: 4,
+      bathroom: 2,
+      size: '7x10',
+      fav: false,
+      populor: true,
+    },
+    {
+      id: 9,
+      name: 'power Grid Township',
+      costpm: '$12,095',
+      imguri: require('./assets/property1.jpg'),
+      address: '2821 Lake Sevilla, Palm Harbor, TX',
+      bed: 4,
+      bathroom: 2,
+      size: '7x10',
+      fav: false,
+      populor: true,
+    },
+    {
+      id: 10,
+      name: 'SRP Blossom',
+      costpm: '$12,095',
+      imguri: require('./assets/property3.jpg'),
+      address: '2821 Lake Sevilla, Palm Harbor, TX',
+      bed: 4,
+      bathroom: 2,
+      size: '7x10',
+      fav: true,
+      populor: true,
+    },
   ]);
 
   const handleFavChange = (id, value) => {
@@ -94,7 +153,7 @@ function App() {
     <div style={{ backgroundColor: '#185abc10' }}>
       <Navbar />
       <Routes>
-        <Route path='/' element={<HomePage />} />
+        <Route path='/' element={<Navigate to='/rent' replace />} />
         <Route
           path='/rent'
           element={<Rent properties={properties} addfn={handleFavChange} />}

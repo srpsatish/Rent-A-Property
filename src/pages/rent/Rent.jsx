@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Drop from '../../assets/chevron.png';
 import FilledButton from '../../components/custom-buttons/FilledButton';
 import PropertyPreview from './../../components/property-preview/PropertyPreview';
@@ -10,12 +10,22 @@ const Rent = ({ properties, addfn }) => {
   const [moveinDate, setMoveinDate] = useState('2022-08-25');
   const [price, setPrice] = useState('$500-$2,500');
   const [propertyType, setPropertyType] = useState('House');
-  // useEffect(() => {
-  //   console.log(location);
-  //   console.log(moveinDate);
-  //   console.log(price);
-  //   console.log(propertyType);
-  // }, [location, moveinDate, price, propertyType]);
+
+  const [filteredProperties, setFilteredProperties] = useState([]);
+
+  useEffect(() => {
+    const newProperty = properties.filter(property => {
+      const regex = new RegExp(`${searchInput}`, 'gi');
+      return (
+        property.name.match(regex) ||
+        property.costpm.match(regex) ||
+        property.address.match(regex)
+      );
+    });
+    setFilteredProperties(newProperty);
+  }, [searchInput]);
+
+  const handleSearch = () => {};
 
   return (
     <div className='rent-container'>
@@ -88,7 +98,7 @@ const Rent = ({ properties, addfn }) => {
         </div>
       </div>
       <div className='preview-section'>
-        <PropertyPreview properties={properties} addfn={addfn} />
+        <PropertyPreview properties={filteredProperties} addfn={addfn} />
       </div>
     </div>
   );
